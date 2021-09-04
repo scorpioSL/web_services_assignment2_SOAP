@@ -7,6 +7,8 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import bit.mrt.e1948303.soap.api.contracts.BookAppointmentByE1948303Reponse;
+import bit.mrt.e1948303.soap.api.contracts.BookAppointmentReponse;
+import bit.mrt.e1948303.soap.api.contracts.BookAppointmentRequest;
 import bit.mrt.e1948303.soap.api.contracts.CancelAppointmentRequest;
 import bit.mrt.e1948303.soap.api.contracts.CancelAppointmentResponse;
 import bit.mrt.e1948303.soap.api.contracts.QueryResponse;
@@ -24,6 +26,12 @@ public class BookAppointmentEndpoint {
 	@ResponsePayload
 	public BookAppointmentByE1948303Reponse bookAppointmentByE1948303() {
 		return this.service.bookAppointmentByE1948303();
+	}
+	
+	@PayloadRoot(namespace = NAMESPACE, localPart = "BookAppointmentRequest")
+	@ResponsePayload
+	public BookAppointmentReponse bookAppointment(@RequestPayload BookAppointmentRequest request) {
+		return this.service.bookAppointment(request.getIndexNumber());
 	}
 
 	@PayloadRoot(namespace = NAMESPACE, localPart = "CancelAppointmentRequest")

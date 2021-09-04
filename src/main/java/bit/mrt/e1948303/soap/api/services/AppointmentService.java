@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import bit.mrt.e1948303.soap.api.contracts.BookAppointmentByE1948303Reponse;
+import bit.mrt.e1948303.soap.api.contracts.BookAppointmentReponse;
 import bit.mrt.e1948303.soap.api.contracts.CancelAppointmentResponse;
 import bit.mrt.e1948303.soap.api.contracts.QueryResponse;
 import bit.mrt.e1948303.soap.api.contracts.Appointment;
@@ -42,9 +43,9 @@ public class AppointmentService {
 	}
 
 //	Adding appointment for the dynamic student
-	public BookAppointmentByE1948303Reponse bookAppointment(String index_number) {
+	public BookAppointmentReponse bookAppointment(String index_number) {
 
-		BookAppointmentByE1948303Reponse response = new BookAppointmentByE1948303Reponse();
+		BookAppointmentReponse response = new BookAppointmentReponse();
 		Appointment existing = this.database.findByIndexNumber(index_number);
 		if (existing == null) {
 			Appointment newAppointment = new Appointment();

@@ -18,6 +18,24 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
+	
+	<xsd:element name="BookAppointmentRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+			<xsd:element name="index_number" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="BookAppointmentReponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="status" type="xsd:string" />
+				<xsd:element name="description" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
 	<xsd:element name="CancelAppointmentRequest">
 		<xsd:complexType>
 			<xsd:sequence>

@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="reference_number" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="index_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,28 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "referenceNumber"
+    "indexNumber"
 })
-@XmlRootElement(name = "CancelAppointmentRequest")
-public class CancelAppointmentRequest {
+@XmlRootElement(name = "BookAppointmentRequest")
+public class BookAppointmentRequest {
 
-    @XmlElement(name = "reference_number")
-    protected int referenceNumber;
+    @XmlElement(name = "index_number", required = true)
+    protected String indexNumber;
 
     /**
-     * Gets the value of the referenceNumber property.
+     * Gets the value of the indexNumber property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getReferenceNumber() {
-        return referenceNumber;
+    public String getIndexNumber() {
+        return indexNumber;
     }
 
     /**
-     * Sets the value of the referenceNumber property.
+     * Sets the value of the indexNumber property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setReferenceNumber(int value) {
-        this.referenceNumber = value;
+    public void setIndexNumber(String value) {
+        this.indexNumber = value;
     }
 
 }
