@@ -4,7 +4,7 @@ Appointment Booking Web Soap Service is a simple web service written in SpringBo
 
 ## Author
 
-Pulasthi Bandara - E1948303(University of Moratuwa, Sri Lanka)
+Pulasthi Bandara(AKA scorpioSL) - E1948303(University of Moratuwa, Sri Lanka)
 
 ## How to run
 
