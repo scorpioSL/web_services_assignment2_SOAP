@@ -1,4 +1,4 @@
-package bit.mrt.e1948303.soap.api.enpoints;
+package bit.mrt.e1948303.soap.api.endpoints;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
